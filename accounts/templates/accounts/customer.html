@@ -1,0 +1,36 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+
+<div class="row pt-3">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Customer:</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Customer</a>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="/create_order/2/">Place Order</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Information</h5>
+			<hr>
+			<p>Name: {{customer.name}}</p>
+            <p>Surname: {{customer.surname}}</p>
+            <p>StudentID: {{customer.student_id}}</p>
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Status</h5>
+			<hr>
+			<h1 style="text-align: center;padding: 10px">{{customer.status}}</h1>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
