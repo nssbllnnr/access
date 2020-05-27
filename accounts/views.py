@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
-from .models import *
+from .models import Employees
 # from .forms import CreateUserForm
 # Create your views here.
 # def registerPage(request):
@@ -22,8 +22,8 @@ from .models import *
 def home(request):
     employees = Employees.objects.all()
     total_employees = employees.count()
-    teachers = employees.filter(status='Teacher').count()
-    students = employees.filter(status='Student').count()
+    teachers = employees.filter(position='Teacher').count()
+    students = employees.filter(position='Student').count()
     context = {'employees':employees,'total_employees':total_employees,'teachers':teachers,'students':students}
     return render(request, 'accounts/dashboard.html',context)
 

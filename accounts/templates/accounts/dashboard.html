@@ -53,11 +53,11 @@
 				<tbody><tr>
                     <th></th>
 					<th>ID</th>
-					<th>Date</th>
+					<th>Registration Date</th>
 					<th>Name</th>
                     <th>Surname</th>
                     <th>StudentID</th>
-					<th>Status</th>
+					<th>Position</th>
 				</tr>
 
 				
@@ -66,11 +66,11 @@
                 <tr>
                     <td><a class="btn btn-sm btn-info" href="#">View</a></td>
                     <td>{{employee.id}}</td>
-                    <td>{{employee.date_created}}</td>
+                    <td>{{employee.reg_date}}</td>
                     <td>{{employee.name}}</td>
                     <td>{{employee.surname}}</td>
-                    <td>{{employee.student_id}}</td>
-                    <td>{{employee.status}}</td>
+                    <td>{{employee.person_id}}</td>
+                    <td>{{employee.position}}</td>
                 </tr>
                 {% endfor %}
             
