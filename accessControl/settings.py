@@ -25,7 +25,7 @@ SECRET_KEY = 'gzjzkv2oku_-^ui63g1@5egpfpq(j4-9z8%m0wb4twvt%a!9=8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True # Попозже при хостинги нужно прописать False
 
-ALLOWED_HOSTS = [] # url host
+ALLOWED_HOSTS = ['sdu-access-control-system.herokuapp.com','127.0.0.1'] # url host
 
 
 # Application definition
