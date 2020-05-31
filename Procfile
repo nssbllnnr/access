@@ -1,0 +1,1 @@
+web: gunicorn accessControl.wsgi --log-file -
