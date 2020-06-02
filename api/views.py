@@ -23,3 +23,17 @@ class DeviceViewSet(ModelViewSet):
     # filter_backends = (OrderingFilter, SearchFilter)
     # ordering_fields = ['price', 'seoson']
     # search_fields = ['width', 'profile', 'diameter']
+
+class AccessViewSet(ModelViewSet):
+    queryset = Access.objects.all()
+    serializer_class = AccessSerializer
+    # filter_backends = (OrderingFilter, SearchFilter)
+    # ordering_fields = ['price', 'seoson']
+    # search_fields = ['width', 'profile', 'diameter']
+
+class HistoryViewSet(ModelViewSet):
+    queryset = History.objects.all()
+    serializer_class = HistorySerializer
+    # filter_backends = (OrderingFilter, SearchFilter)
+    # ordering_fields = ['price', 'seoson']
+    # search_fields = ['width', 'profile', 'diameter']
