@@ -40,7 +40,6 @@ class Device(Model):
         return f'SerialNumber : {self.serial_number}\nDeviceIp : {self.device_ip}\nDeviceModel : {self.device_model}\nLastActivity : {self.last_activity}'
 
 class Access(Model):
-
     card_id = CharField(primary_key=True, max_length=30, blank=True, unique=True, null=False)
     access = BooleanField(blank=True, default=False, null=False)
     user = ForeignKey(Employee, on_delete=CASCADE, null=True)
@@ -50,10 +49,6 @@ class Access(Model):
         return f'CardId : {self.card_id}\nAccess : {self.access}\nUser : {self.user}\nRegistredDate : {self.registred_date}'
 
 class History(Model):
-    STATUS = (
-        ('IN', 'IN'),
-        ('OUT', 'OUT'),
-    )
     entry_date = DateTimeField(auto_now_add=True, null=True)
     out_date = DateTimeField(null=True)
     card = ForeignKey(Access, on_delete=CASCADE, null=True)
