@@ -55,6 +55,7 @@ class History(Model):
         ('OUT', 'OUT'),
     )
     entry_date = DateTimeField(auto_now_add=True, null=True)
+    out_date = DateTimeField(null=True)
     card = ForeignKey(Access, on_delete=CASCADE, null=True)
     device = ForeignKey(Device, on_delete=CASCADE, null=True)
 
