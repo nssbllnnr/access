@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'accessControl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2g5sdecqagpoh',
+        'USER': 'jfqutqsqryslsw',
+        'PASSWORD': '25e85cf1c563f22bba0c261b48d5ce11662c243cd9fb94a22618ae4a4c06122c',
+        'HOST': 'ec2-52-44-166-58.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

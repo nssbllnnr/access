@@ -32,6 +32,7 @@ class Employees(models.Model):
     reg_date = models.DateTimeField(auto_now_add=True, null=True)
     def __str__(self):
         return self.name
+        
 class Access(models.Model):
     card_id = models.CharField(primary_key=True, max_length=30, blank=True, unique=True, null=False)
     access = models.BooleanField(blank=True, default=False, null=False)
