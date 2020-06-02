@@ -24,4 +24,4 @@ class AccessSerializer(ModelSerializer):
 class HistorySerializer(ModelSerializer):
     class Meta:
         model = History
-        fields = ['entry_date','card','device']
+        fields = ['entry_date','out_date','card','device']
