@@ -3,25 +3,25 @@ from .models import *
 
 class PersonalSerializer(ModelSerializer):
     class Meta:
-        model = Personal
-        fields = '__all__'
+        model = Employee
+        fields = ['student_id','name','surname','deportment','position','check_in','check_out']
 
 class EmployeeSerializer(ModelSerializer):
     class Meta:
         model = Employee
-        fields = '__all__'
+        fields = ['student_id','image','name','surname','check_in','check_out']
 
 class DeviceSerializer(ModelSerializer):
     class Meta:
         model = Device
-        fields = '__all__'
+        fields = ['device_ip','serial_number','device_model','is_out','wait_time','last_activity']
 
 class AccessSerializer(ModelSerializer):
     class Meta:
         model = Access
-        fields = '__all__'
+        fields = ['card_id','access','user','registred_date']
 
 class HistorySerializer(ModelSerializer):
     class Meta:
         model = History
-        fields = '__all__'
+        fields = ['entry_date','card','device']
