@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from .serializers import *
 
 class PersonalViewSet(ModelViewSet):
-    queryset = Personal.objects.all()
+    queryset = Employee.objects.all()
     serializer_class = PersonalSerializer
     filter_backends = (OrderingFilter, SearchFilter)
     ordering_fields = ['name', 'surname']
